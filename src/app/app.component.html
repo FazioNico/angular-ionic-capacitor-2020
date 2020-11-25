@@ -9,4 +9,20 @@
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus et repellendus dolor iusto ea quos, atque impedit fuga sunt in accusantium eos aliquid quod sit voluptates earum est mollitia dignissimos?
     </p>
   </ion-text>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p>alpha: {{alpha}}</p>
+        <p>datas: {{datas|json}}</p>
+        <!-- <p>datas$: {{datas$|async|json}}</p> -->
+        <div *ngIf="datas$|async as myDataSubscription">
+          <p>alpha$: {{myDataSubscription?.alpha}}</p>
+          <p>beta$: {{myDataSubscription?.beta}}</p>          
+        </div>
+
+        <ion-button #btnOn (click)="runMotion(btnOn, btnOff)">Run Motion Sensor</ion-button>
+        <ion-button #btnOff (click)="stopMotion(btnOn, btnOff)">Stop Motion Sensor</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
