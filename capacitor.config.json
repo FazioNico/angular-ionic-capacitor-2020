@@ -1,0 +1,13 @@
+{
+  "appId": "ch.nicolasfazio.capacitordemo2020",
+  "appName": "capacitor-demo",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
